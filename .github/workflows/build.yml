@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:2.4
+      image: zmkfirmware/zmk-build-arm:2.5
     name: Build
     steps:
       - name: Checkout
@@ -33,19 +33,21 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Odd43)
-        run: west build -s zmk/app -b odd43 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Odd43 DTS File
+      - name: West Build (BLe Chiffre)
+        run: west build -s zmk/app -b ble_chiffre -d ble_chiffre -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      #   uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
+      #   id: west-build-ble-chiffre
+      #   with:
+      #     args: 'build "-s zmk/app -b ble_chiffre -d ble_chiffre -- -DZMK_CONFIG=/github/workspace/config"'
+      # - name: BLe_Chffre Kconfig file
+      #   run: cat ble_chiffre/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: BLe Chiffre DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/odd43.dts.pre.tmp
-      - name: Odd43 Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+        run: cat -n ble_chiffre/zephyr/ble_chiffre.dts.pre.tmp
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 odd43.uf2
-      - name: Archive (Odd43)
+        run: cp ble_chiffre/zephyr/zmk.uf2 ble_chiffre.uf2
+      - name: Archive (BLe_Chiffre)
         uses: actions/upload-artifact@v2
         with:
-          name: firmware
-          path: odd43.uf2
-     
-
+          name: ble_chiffre
+          path: ble_chiffre.uf2
