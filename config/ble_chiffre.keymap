@@ -12,9 +12,7 @@
 
 #define DEFAULT 0
 #define NUM_SYM 1
-#define NUM 	2
-#define UTIL    3
-#define NAV		4
+#define NAV		2
 
 / {
 	behaviors {
@@ -122,7 +120,7 @@
     num {
             bindings = <
     &kp EXCL &kp AT &kp POUND &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
-    &kp C_PLAY &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT &trans &kp MINUS &kp EQUAL &kp LBRC &kp RBRC
+    &kp C_PP &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT &trans &kp MINUS &kp EQUAL &kp LBRC &kp RBRC
     &kp BSLH &kp SEMI &kp LBRC &kp LBKT &kp LPAR &kp RPAR &kp RBKT &kp RBRC &kp SQT &kp BSLH
     &kp LGUI &trans &trans &none
             >;
