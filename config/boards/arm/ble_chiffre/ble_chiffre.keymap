@@ -105,7 +105,7 @@
     default_layer {
             bindings = <
     &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
-    &hm1 4 A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &hm1 3 SEMI
+    &lt 4 A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &lt 3 SEMI
     &hm1 LSHIFT Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &hm1 RSHIFT FSLH
     &kp LCTRL &bh 2 SPACE &bh 1 SPACE &kp RALT
             >;
@@ -116,7 +116,7 @@
     &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
     &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp MINUS &kp EQUAL &kp LBKT &kp RBKT
     &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans &trans &kp PIPE
-    &kp LGUI &kp DEL &trans &none
+    &none &kp DEL &trans &kp DQT
             >;
         };
 
@@ -125,7 +125,7 @@
     &kp EXCL &kp AT &kp POUND &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
     &kp C_PP &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT &trans &kp UNDER &kp PLUS &kp LBRC &kp RBRC
     &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp BSLH
-    &trans &trans &trans &none
+    &kp LGUI &trans &trans &kp SQT
             >;
         };
 
