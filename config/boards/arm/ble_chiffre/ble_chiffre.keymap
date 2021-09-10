@@ -92,7 +92,7 @@
 		{
 			timeout-ms = <35>;
 			key-positions = <28 29>;
-			bindings = <$kp FSLH>;
+			bindings = <&kp FSLH>;
 		};
 	};
 };
